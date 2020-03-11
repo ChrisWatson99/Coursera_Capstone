@@ -1,0 +1,27 @@
+git status
+
+# Create local copy of git repository - Called "cloning"
+# Press clone button in git, select ssh, and copy target. Add to below ...
+git clone git@github.com:ChrisWatson99/Coursera_Capstone.git
+
+ls
+cd Coursera_Capstone/
+ls
+
+# Add downloaded Notebook to repository
+git status   # Shows new file in red
+
+# Add file
+git add 'Applied Data Science Capstone.ipynb'
+
+git status      # Shows new file in green
+
+# Commit new file
+git commit -m 'Adding Capstone Notebook to my coursera github repository'
+
+# Push changes to respository
+git push
+
+# Everything up to date ...
+git status
+
