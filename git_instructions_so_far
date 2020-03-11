@@ -8,7 +8,10 @@ ls
 cd Coursera_Capstone/
 ls
 
-# Add downloaded Notebook to repository
+#########################################
+# Add downloaded Notebook to repository #
+#########################################
+
 git status   # Shows new file in red
 
 # Add file
