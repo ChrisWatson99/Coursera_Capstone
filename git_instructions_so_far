@@ -1,5 +1,7 @@
 # Setup described at:
 #     https://docs.github.com/en/enterprise-server@2.19/github/getting-started-with-github/set-up-git
+# *** REALLY WORTH READING ***
+#
 # Mac:
 #    $ brew install git
 #       => error and instruction to perform ...
@@ -57,8 +59,55 @@ git status      # Shows new file in green
 git commit -m 'Adding Capstone Notebook to my coursera github repository'
 
 # Push changes to respository
-git push
+git push                        # IF THIS FAILS SEE BELOW ...
 
 # Everything up to date ...
 git status
+
+
+# USING GUI
+#     - Make changes
+#     - Button "Rescan"
+#     - Button: "Stage changed"
+#     - Add Commit Message ...
+#     - Button: "Commit"
+#     - Button: push
+#           Pushing to github.com:ChrisWatson99/Coursera_Capstone.git
+#           Warning: Permanently added the RSA host key for IP address '140.82.121.3' to the list of known hosts.
+#           git@github.com: Permission denied (publickey).
+#           fatal: Could not read from remote repository.
+#
+
+
+# Git connection error handling: See ...
+#    https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/error-permission-denied-publickey
+#      => looks like key is missing / not associated
+#
+#   => go to 
+#      https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+#   ... and on to
+#      https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/checking-for-existing-ssh-keys
+#   ... in the file I see I already have a key
+#           IdentityFile ~/.ssh/id_rsa
+#   ... which needs adding using
+#      https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
+#   =>  $ ssh-add -K ~/.ssh/id_rsa
+#          Identity added: /Users/chriswatson/.ssh/id_rsa (chriswatson@CWWs-Mac)
+#   ... and on to
+#      https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+#
+#   => $ pbcopy < ~/.ssh/id_rsa.pub
+#
+# $ git push
+#     Enumerating objects: 5, done.
+#     Counting objects: 100% (5/5), done.
+#     Delta compression using up to 8 threads
+#     Compressing objects: 100% (3/3), done.
+#     Writing objects: 100% (3/3), 978 bytes | 978.00 KiB/s, done.
+#     Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+#     remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+#     To github.com:ChrisWatson99/Coursera_Capstone.git
+#        90a00c5..3caba93  master -> master
+
+
 
