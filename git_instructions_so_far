@@ -1,3 +1,37 @@
+# Setup described at:
+#     https://docs.github.com/en/enterprise-server@2.19/github/getting-started-with-github/set-up-git
+# Mac:
+#    $ brew install git
+#       => error and instruction to perform ...
+#    $ xcode-select --install
+#   now repeat:
+#    $ brew install git
+#      => Does not run to completion !
+#
+#   now repeat:
+#    $ brew install git
+#           => Success
+#
+#    $ git --version
+#       git version 2.24.3 (Apple Git-128)
+#
+#    $ git status
+#       fatal: not a git repository (or any of the parent directories): .git
+#
+#    $ brew install git-gui
+#        => Appears to install python@3.9    but ...
+#
+#    $ python --version
+#        Python 3.6.8 :: Anaconda, Inc.
+#
+#    ==>>  YOU CAN NOW RUN: 
+#    $ git-gui
+#
+# Git repository in
+#    /Users/chriswatson/github_base/Coursera/Capstone/Coursera_Capstone
+#
+
+
 git status
 
 # Create local copy of git repository - Called "cloning"
@@ -14,12 +48,12 @@ ls
 
 git status   # Shows new file in red
 
-# Add file
+# Add new file or stage changes
 git add 'Applied Data Science Capstone.ipynb'
 
 git status      # Shows new file in green
 
-# Commit new file
+# Commit new / changed file
 git commit -m 'Adding Capstone Notebook to my coursera github repository'
 
 # Push changes to respository
