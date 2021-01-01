@@ -64,8 +64,10 @@ git push                        # IF THIS FAILS SEE BELOW ...
 # Everything up to date ...
 git status
 
-
-# USING GUI
+#################
+# USING GIT-GUI #
+#################
+#
 #     - Make changes
 #     - Button "Rescan"
 #     - Button: "Stage changed"
@@ -112,4 +114,9 @@ git status
 #        90a00c5..3caba93  master -> master
 
 
+##########################################################
+# View git notebooks including maps, ... using 'nbviwer' #
+# https://nbviewer.jupyter.org/                          #
+#   and use full http address of git notebook            #
+##########################################################
 
