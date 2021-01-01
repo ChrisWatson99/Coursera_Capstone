@@ -95,8 +95,10 @@ git status
 #          Identity added: /Users/chriswatson/.ssh/id_rsa (chriswatson@CWWs-Mac)
 #   ... and on to
 #      https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
-#
 #   => $ pbcopy < ~/.ssh/id_rsa.pub
+#   ... and then follow instructions in browser to add key to git account/repository
+#
+#   => FIXED :o)
 #
 # $ git push
 #     Enumerating objects: 5, done.
